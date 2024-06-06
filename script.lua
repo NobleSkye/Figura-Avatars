@@ -18,9 +18,9 @@ models.uwu:setVisible(false)
 
 
 -- Tab Enitiy & List Nameplates
-nameplate.LIST:setText("§d Skye :trans:")
-nameplate.ENTITY:setText("§d Skye")
-nameplate.CHAT:setText("§d Skye")
+-- nameplate.LIST:setText("§d Skye :trans:")
+-- nameplate.ENTITY:setText("§d Skye")
+-- nameplate.CHAT:setText("§d Skye")
 
 
 function pings.waveanim()

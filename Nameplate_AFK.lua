@@ -11,9 +11,9 @@
 --]]
 
 names = {
-    ["ENTITY"] = '[{"text":"§d Skye"}]',
-    ["LIST"] = '[{"text":"§d Skye :trans:"}]',
-    ["CHAT"] = '[{"text":"§d Skye"}]'
+    ["ENTITY"] = '[{"text":"Skye"}]',
+    ["LIST"] = '[{"text":"Skye :trans:"}]',
+    ["CHAT"] = '[{"text":"Skye"}]'
 }
 
 getAFK = require("Slyme_AFK")
