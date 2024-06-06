@@ -108,8 +108,8 @@ local pingNames = {
        local messageLower = msg:lower()
        for _, v in pairs(pingNames) do
           if messageLower:find(v) then
-             sounds:playSound('minecraft:block.note_block.pling', client:getCameraPos(), 1, 1.2)
-             host:setActionbar('BEEP', true)
+            --  sounds:playSound('minecraft:block.note_block.pling', client:getCameraPos(), 1, 1.2)
+            --  host:setActionbar('BEEP', true)
              break
           end
        end

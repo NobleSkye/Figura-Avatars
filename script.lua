@@ -33,6 +33,8 @@ function pings.waveanim()
     return msg
   end
 
+-- SquAPI Stuff
+
 squapi.smoothHead(
     models.model.root.Torso.head, 
     0.1, 
@@ -43,6 +45,23 @@ squapi.smoothTorso(
     models.model.root.Torso, 
     0.5, 
     0.4
+)
+
+squapi.eye(
+	models.model.root.Torso.head.Eyes.right, --element
+	1.25, --(.25)leftdistance
+	.25, --(1.25)rightdistance
+	nil, --(.5)updistance
+	nil, --(.5)downdistance
+	nil  --(false)switchvalues
+)
+squapi.eye(
+	models.model.root.Torso.head.Eyes.left, --element
+	nil, --(.25)leftdistance
+	nil, --(1.25)rightdistance
+	nil, --(.5)updistance
+	nil, --(.5)downdistance
+	nil  --(false)switchvalues
 )
 
 function squapi.bouncetowards(current, target, vel, stiff, bounce)
