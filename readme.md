@@ -1,3 +1,3 @@
-# Catgirl Avatar By NobleSkye
+# accessories By NobleSkye
 
-This is just my main avatar uploaded to github mainly just for a backup incase i do something wrong i can restore it and incase someone wants to see my avatar for whatever reason
+These are just some accessories that are created or found (With permission and will see credit in the models themselves) that i find cool and useful
