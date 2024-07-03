@@ -1,14 +1,4 @@
---[[
-    ___ _   _ _ _ _ ___ ___ ___ _   _
-   |_ -| |_|_'_| v | ._| ._| . | |_| |_
-   |___|___||_||_v_|___|_'_|_,_|___|___|
--- ================================================= --
-   AFK Checker: Nameplates                    | v1.2
 
-   Displays how long you've been AFK for in your
-   nameplate. Make sure to customize names before
-   use!
---]]
 
 names = {
     ["ENTITY"] = '[{"text":"Skye"}]',

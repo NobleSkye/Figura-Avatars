@@ -1,14 +1,4 @@
---[[
-    ___ _   _ _ _ _ ___ ___ ___ _   _
-   |_ -| |_|_'_| v | -_| ._| . | |_| |_
-   |___|___||_||_v_|___|_-_|_,_|___|___|
--- ================================================= --
-   AFK Nameplate: Rewritten
 
-   A rewrite of my old AFK script, now with less
-   hard-coding! Just require this script into
-   another and use the function returned.
---]]
 
 -- The amount of ticks before you are "afk"
 local afkDelay = 15*20
