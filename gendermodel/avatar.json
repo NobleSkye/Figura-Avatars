@@ -1,0 +1,10 @@
+{
+  "name": "gender model",
+  "description": 
+  "vanilla player model with boobs!\nnow with adjustable boob size.",
+  "authors": [
+    "implied"
+  ],
+  "color": "#F9B4B4",
+  "autoScripts": [ "config", "player" ]
+}

@@ -10,6 +10,8 @@ local hideEnabled
 
 local hideToggleAction
 
+
+nameplate.Entity:setPos(0, 0, 0)
 -----------
 -- Pings --
 -----------
