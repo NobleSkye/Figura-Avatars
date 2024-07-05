@@ -12,7 +12,7 @@ just some silly models to add to your player model with the mod [Figura](https:/
 
 
 
-
+<!-- 
 
 
       ___           ___                         ___     
@@ -25,4 +25,4 @@ just some silly models to add to your player model with the mod [Figura](https:/
   \  \:\_\:\      |  |:|        /  /:/~~~~  \  \:\ \:\  
    \  \:\/:/      |  |:|       /__/:/        \  \:\_\/  
     \  \::/       |__|:|       \__\/          \  \:\    
-     \__\/         \__\|                       \__\/    
+     \__\/         \__\|                       \__\/     -->
