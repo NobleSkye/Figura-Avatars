@@ -1,0 +1,13 @@
+{
+  "name": "Crab",
+  "authors": [
+    "Maid Outfit by",
+    "Github.com/Nobleskye",
+    "Oringal Crab by",
+	  "github.com/ibll"
+  ],
+  "color": "#64F",
+  "scripts": [
+    "script"
+  ]
+}
