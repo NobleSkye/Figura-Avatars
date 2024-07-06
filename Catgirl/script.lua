@@ -20,7 +20,6 @@ local squapi = require("SquAPI")
 
 
 
-
 -- Hide vanilla models & Other Thingys
 vanilla_model.CAPE:setVisible(false)
 vanilla_model.PLAYER:setVisible(false)
