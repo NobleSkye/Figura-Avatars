@@ -38,9 +38,3 @@ end
 function pings.stopanim()
   animations.model.pose:stop()
 end
-function events.chat_send_message(msg)
-  if msg == "cancel" then
-      pings.waveanim()
-    end
-  return msg
-end
