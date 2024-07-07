@@ -1,5 +1,5 @@
 
-models.Plushie.Skull.body.Boobs:setPrimaryTexture("SKIN")
+models.Plushie.Skull.body.Boobas:setPrimaryTexture("SKIN")
 
 
 
