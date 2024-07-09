@@ -49,13 +49,10 @@ function pings.waveanim()
 
   function events.entity_init()
 	require("physBoneAPI")
-	physBone.physBoobas:setGravity(0)
+	physBone.physBoobas:setGravity(1)
 	physBone.physBoobas:setAirResistance(0)
-	physBone.physBoobas:setSpringForce(40)
+	physBone.physBoobas:setSpringForce(100)
   end
-
-
-
 
 
 
