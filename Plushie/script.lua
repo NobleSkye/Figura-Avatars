@@ -7,7 +7,7 @@
 -- -- plushieState is the skulls that show when blockToFind is found
 -- plushieState = models.plushieState.Skull
 
-
+vanilla_model.ARMOR:setVisible(false)
 local plushieState = models.plushieState.Skull
 local playerSkull = models.Plushie.Skull
 
