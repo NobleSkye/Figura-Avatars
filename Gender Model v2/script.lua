@@ -20,9 +20,11 @@ models.model:setPrimaryTexture("SKIN")
 
 
 
-function events.entity_init()
+function ​ events.entity_init()
 	require("physBoneAPI")
 	physBone.physBoobas:setGravity(1)
 	physBone.physBoobas:setAirResistance(0)
 	physBone.physBoobas:setSpringForce(100)
   end
+
+  --error for some reason here
