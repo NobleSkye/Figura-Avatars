@@ -2,6 +2,7 @@
 
 
 vanilla_model.PLAYER:setVisible(false)
+vanilla_model.ARMOR:setVisible(false)
 local outline = require "outline"
 outline(models.model,{color=vec(125,125,125)})
 
