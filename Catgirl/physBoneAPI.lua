@@ -1,29 +1,70 @@
 -- By ChloeSpacedOut <3
 physBone = {}
 local physBoneIndex = {}
+local boneID = 0
 local lastDelta = 0
 local lastDeltaTime,lasterDeltaTime,lastestDeltaTime = 0,0,0
 
-function newPhysBone(v,rotMod,gravity,airResistance,simSpeed,equilibrium,springForce)
+--- method by GS
+local old_class_index = figuraMetatables.ModelPart.__index
+local class_methods = {
+  newPhysbone = function(self,physBonePreset)
+		local ID = self:getName()
+		if physBone[ID] then error('The physBone "'..ID..'" already exists, and cannot be created') end
+		boneID = boneID + 1
+		physBoneIndex[boneID] = ID
+		if physBonePreset == "physBone" then
+			physBone[ID] = newPhysBone(self,-9.81,0.1,1,vec(0,0),0,vec(0,0,0))
+		elseif physBonePreset == "physBoob" then
+			physBone[ID] = newPhysBone(self,-9.81,0.2,2,vec(0,0),70,vec(-90,0,0))
+		elseif physBonePreset == "physEar" then
+			physBone[ID] = newPhysBone(self,-9.81,0.3,2,vec(90,0),30,vec(0,180,180))
+		end
+		self:setRot(0,90,0)
+		return self
+  end,
+	removePhysBone = function(self)
+		local ID = self:getName()
+		if not physBone[ID] then error('The physBone "'..ID..'" could not be found') end
+		boneID = 0
+		local newIndex = {}
+		for k,v in pairs(physBoneIndex) do
+			if v ~= ID then
+				boneID = boneID + 1
+				newIndex[boneID] = v
+			end
+		end
+		physBoneIndex = newIndex
+		physBone[ID] = nil
+		self:setRot(0,0,0)
+		for k,v in pairs(self:getChildren()) do
+			v:setRot(v:getRot())
+		end
+		return self
+  end
+}
+
+function figuraMetatables.ModelPart:__index(key)
+  if class_methods[key] then
+    return class_methods[key]
+  else
+    return old_class_index(self, key)
+  end
+end
+---
+
+function newPhysBone(v,gravity,airResistance,simSpeed,equilibrium,springForce,rotMod)
 	local ID = v:getName()
 	return {
 		ID = ID,
 		path = v,
 		pos = v:partToWorldMatrix():apply(),
 		lastPos = v:partToWorldMatrix():apply(),
-		rotMod = rotMod,
-		setRotMod =	
-			function(self,data)
-				self.rotMod = data
-			end,
-		getRotMod =	
-			function(self)
-				return self.upsideDown						
-			end,
 		gravity = gravity,
 		setGravity =	
 			function(self,data)
 				self.gravity = data
+				return self
 			end,
 		getGravity =	
 			function(self)
@@ -33,6 +74,7 @@ function newPhysBone(v,rotMod,gravity,airResistance,simSpeed,equilibrium,springF
 		setAirResistance =	
 			function(self,data)
 				self.airResistance = data
+				return self
 			end,
 		getAirResistance =	
 			function(self)
@@ -42,6 +84,7 @@ function newPhysBone(v,rotMod,gravity,airResistance,simSpeed,equilibrium,springF
 		setSimSpeed =	
 			function(self,data)
 				self.simSpeed = data
+				return self
 			end,
 		getSimSpeed =	
 			function(self)
@@ -51,6 +94,7 @@ function newPhysBone(v,rotMod,gravity,airResistance,simSpeed,equilibrium,springF
 		setEquilibrium =	
 			function(self,data)
 				self.equilibrium = data
+				return self
 			end,
 		getEquilibrium =	
 			function(self)
@@ -60,16 +104,26 @@ function newPhysBone(v,rotMod,gravity,airResistance,simSpeed,equilibrium,springF
 		setSpringForce =	
 			function(self,data)
 				self.springForce = data
+				return self
 			end,
 		getSpringForce =	
 			function(self)
 				return self.springForce						
+			end,
+		rotMod = rotMod,
+		setRotMod =	
+			function(self,data)
+				self.rotMod = data
+				return self
+			end,
+		getRotMod =	
+			function(self)
+				return self.upsideDown						
 			end
 	}
 end
 
 function events.entity_init()
-	local boneID = 0
 	-- Pendulum object initialization
 	local function findCustomParentTypes(path)
 		for k,v in pairs(path:getChildren()) do
@@ -81,11 +135,11 @@ function events.entity_init()
 				boneID = boneID + 1
 				physBoneIndex[boneID] = ID
 				if isBone then
-					physBone[ID] = newPhysBone(v,vec(0,0,0),-9.81,0.1,1,vec(0,0),0)
+					physBone[ID] = newPhysBone(v,-9.81,0.1,1,vec(0,0),0,vec(0,0,0))
 				elseif isBoob then
-					physBone[ID] = newPhysBone(v,vec(0,0,-90),-9.81,0.2,2,vec(0,0),70)
+					physBone[ID] = newPhysBone(v,-9.81,0.2,2,vec(0,0),70,vec(-90,0,0))
 				elseif isEar then
-					physBone[ID] = newPhysBone(v,vec(0,0,180),-9.81,0.3,2,vec(90,0),30)
+					physBone[ID] = newPhysBone(v,-9.81,0.3,2,vec(90,0),30,vec(0,180,180))
 				end
 				physBone[ID].path:setRot(0,90,0)
 			end
@@ -113,8 +167,8 @@ events[renderFunction] = function (delta)
 	-- Time Calculations
 	deltaTime = (physClock + delta) - lastDelta
   lastDelta = (physClock + delta)
-
 	for _,ID in ipairs(physBoneIndex) do
+		
 		-- Pendulum logic
 		local pendulumBase = physBone[ID].path:partToWorldMatrix():apply()
 		local velocity
@@ -162,8 +216,8 @@ events[renderFunction] = function (delta)
 			mat:translate(pivot)
 
 			mat:translate(-parentPivot)
-			mat:rotate(0,-90,0)
 			mat:rotate(physBone[ID].rotMod)
+			mat:rotate(0,-90,0)
 			mat:rotate(vec(pitch,0,yaw))
 			mat:translate(parentPivot)
 
