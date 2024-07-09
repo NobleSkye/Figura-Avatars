@@ -47,6 +47,19 @@ function pings.waveanim()
     return msg
   end
 
+  function events.entity_init()
+	require("physBoneAPI")
+	physBone.physBoobas:setGravity(0)
+	physBone.physBoobas:setAirResistance(0)
+	physBone.physBoobas:setSpringForce(40)
+  end
+
+
+
+
+
+
+
 -- SquAPI Stuff
 
 squapi.smoothHead(
