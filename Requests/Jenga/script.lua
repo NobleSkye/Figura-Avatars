@@ -22,5 +22,9 @@ vanilla_model.CAPE:setVisible(false)
 --hide vanilla elytra model
 vanilla_model.ELYTRA:setVisible(false)
 
+local mainPage = action_wheel:newPage()
+action_wheel:setPage(mainPage)
 
-main:setAction(-1, require("auto_animations"))
+mainPage:newAction():title(""):item("").leftClick = function ()
+    
+end
