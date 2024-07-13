@@ -14,7 +14,7 @@
 
 
 -- Local Vars
-local mainPage = action_wheel:newPage()
+
 local squapi = require("SquAPI")
 
 
