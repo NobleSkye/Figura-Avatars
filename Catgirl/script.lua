@@ -38,14 +38,6 @@ models.uwu:setVisible(false)
 
 
 
-function events.item_render(item)
-    if item.id == "minecraft:totem_of_undying" then
-        return models.blahaj.ItemTotem
-    end
-end
-
-
-
 
 function pings.waveanim()
     animations.model.wave:play()
