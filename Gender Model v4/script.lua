@@ -11,15 +11,15 @@
 --      \__\/         \__\|                       \__\/         \__\/                  \__\/         \__\/         \__\|                                             
 
 
--- PhysBoneAPI by ChloeSpacedOut
+
 vanilla_model.ARMOR:setVisible(false)
 -- vanilla_model.PLAYER:setVisible(false)
 vanilla_model.CAPE:setVisible(false)
 vanilla_model.HELMET:setVisible(true)
 models.model:setPrimaryTexture("SKIN")
 vanilla_model.PLAYER:setVisible(false)
--- yep.. this is all the scipt there is
 
+-- PhysBoneAPI by ChloeSpacedOut
  function events.entity_init()
 	require("physBoneAPI")
 	physBone.physBoobas:setGravity(1)
