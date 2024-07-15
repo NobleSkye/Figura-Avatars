@@ -37,6 +37,16 @@ models.uwu:setVisible(false)
 -- nameplate.CHAT:setText("§d Skye")
 
 
+
+function events.item_render(item)
+    if item.id == "minecraft:totem_of_undying" then
+        return models.blahaj.ItemTotem
+    end
+end
+
+
+
+
 function pings.waveanim()
     animations.model.wave:play()
   end
@@ -96,7 +106,5 @@ function squapi.bouncetowards(current, target, vel, stiff, bounce)
 	current = (current + vel) + (dif * bounce)
 	return current, vel
 end
-
-
 
 
