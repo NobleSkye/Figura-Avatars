@@ -1,3 +1,17 @@
+--       ___           ___           ___           ___           ___           ___           ___                                         
+--      /  /\         /  /\         /  /\         /  /\         /  /\         /  /\         /  /\             
+--     /  /::\       /  /::\       /  /::|       /  /::|       /  /::\       /  /::|       /  /::\            
+--    /  /:/\:\     /  /:/\:\     /  /:|:|      /  /:|:|      /  /:/\:\     /  /:|:|      /  /:/\:\           
+--   /  /:/  \:\   /  /:/  \:\   /  /:/|:|__   /  /:/|:|__   /  /::\ \:\   /  /:/|:|__   /  /:/  \:\          
+--  /__/:/ \  \:\ /__/:/ \__\:\ /__/:/_|::::\ /__/:/_|::::\ /__/:/\:\_\:\ /__/:/ |:| /\ /__/:/ \__\:|         
+--  \  \:\  \__\/ \  \:\ /  /:/ \__\/  /~~/:/ \__\/  /~~/:/ \__\/  \:\/:/ \__\/  |:|/:/ \  \:\ /  /:/         
+--   \  \:\        \  \:\  /:/        /  /:/        /  /:/       \__\::/      |  |:/:/   \  \:\  /:/          
+--    \  \:\        \  \:\/:/        /  /:/        /  /:/        /  /:/       |__|::/     \  \:\/:/           
+--     \  \:\        \  \::/        /__/:/        /__/:/        /__/:/        /__/:/       \__\__/            
+--      \__\/         \__\/         \__\/         \__\/         \__\/         \__\/                            
+
+
+
 -- Function to set game mode to survival
 function gms()
     host:sendChatCommand("/gamemode survival")
@@ -39,23 +53,22 @@ function events.chat_send_message(msg)
     return msg
 end
 
--- Define hotkeys and their functions
-local function setupHotkeys()
-    local keybinds = keybinds or {}
+-- -- Define hotkeys and their functions
+-- local function setupHotkeys()
+--     local keybinds = keybinds or {}
 
-    local survivalKey = keybinds:newKeybind('Set Survival Mode', 'key.keyboard.f13')
-    survivalKey.press = function() gms() end
+--     local survivalKey = keybinds:newKeybind('Set Survival Mode', 'key.keyboard.f13')
+--     survivalKey.press = function() gms() end
 
-    local creativeKey = keybinds:newKeybind('Set Creative Mode', 'key.keyboard.f14')
-    creativeKey.press = function() gmc() end
+--     local creativeKey = keybinds:newKeybind('Set Creative Mode', 'key.keyboard.f14')
+--     creativeKey.press = function() gmc() end
 
-    local spectatorKey = keybinds:newKeybind('Set Spectator Mode', 'key.keyboard.f15')
-    spectatorKey.press = function() gmsp() end
+--     local spectatorKey = keybinds:newKeybind('Set Spectator Mode', 'key.keyboard.f15')
+--     spectatorKey.press = function() gmsp() end
 
-    local adventureKey = keybinds:newKeybind('Set Adventure Mode', 'key.keyboard.f16')
-    adventureKey.press = function() gma() end
-end
+--     local adventureKey = keybinds:newKeybind('Set Adventure Mode', 'key.keyboard.f16')
+--     adventureKey.press = function() gma() end
+-- end
 
--- Call setupHotkeys() to initialize the hotkeys
-setupHotkeys()
-
+-- -- Call setupHotkeys() to initialize the hotkeys
+-- setupHotkeys()
