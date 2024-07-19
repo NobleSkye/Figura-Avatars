@@ -16,7 +16,7 @@
 -- Local Vars
 
 local squapi = require("SquAPI")
-require("CommandAPI")
+require("CommandAliases")
 
 
 
