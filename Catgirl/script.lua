@@ -16,7 +16,7 @@
 -- Local Vars
 
 local squapi = require("SquAPI")
-
+require("CommandAPI")
 
 
 
@@ -25,7 +25,7 @@ vanilla_model.CAPE:setVisible(false)
 vanilla_model.PLAYER:setVisible(false)
 vanilla_model.ARMOR:setVisible(false)
 
-vanilla_model.HELMET:setVisible(true)
+
 
 models.plushie:setVisible(false)
 models.uwu:setVisible(false)
