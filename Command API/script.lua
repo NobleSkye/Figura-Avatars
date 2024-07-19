@@ -1,2 +1,2 @@
 -- Auto generated script file --
-require("CommandAPI")
+require("Command API.CommandLIB")

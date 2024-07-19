@@ -23,13 +23,18 @@ function events.chat_send_message(msg)
     -- Check the command and call the corresponding function
     if msg == "/gms" then
         gms()
+        return ""  -- Prevent the command from being sent to chat
     elseif msg == "/gmc" then
         gmc()
+        return ""  -- Prevent the command from being sent to chat
     elseif msg == "/gmsp" then
         gmsp()
+        return ""  -- Prevent the command from being sent to chat
     elseif msg == "/gma" then
         gma()
+        return ""  -- Prevent the command from being sent to chat
     end
-    -- Return the message to be sent normally
+
+    -- Return the message to be sent normally if it’s not a custom command
     return msg
 end
