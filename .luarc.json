@@ -113,7 +113,7 @@
     "enable": true,
 
     // Slow down diagnostics on files that are not currently active to save resources.
-    "workspaceDelay": 5000,
+    "workspaceDelay": 30000,
     "workspaceRate": 25,
 
     // Sets the severity of diagnostics to better fit Figura's environment.
