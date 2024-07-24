@@ -18,7 +18,19 @@
 local squapi = require("SquAPI")
 require("CommandAliases")
 
-
+nameplate.LIST:setText(
+    '[{"color":"#fc97fc","text":"ᴜᴡᴜ "},' ..
+    '{"color":"#535353","text":"| "},' ..
+    '{"color":"#fc97fc","text":"N"},' ..
+    '{"color":"#fba8fc","text":"o"},' ..
+    '{"color":"#fbb1fc","text":"b"},' ..
+    '{"color":"#fcbafc","text":"l"},' ..
+    '{"color":"#fcc3fc","text":"e"},' ..
+    '{"color":"#fcccfb","text":"S"},' ..
+    '{"color":"#fcd4fb","text":"k"},' ..
+    '{"color":"#fcdbfb","text":"y"},' ..
+    '{"color":"#fce2fb","text":"e"}]'
+)
 
 -- Hide vanilla models & Other Thingys
 vanilla_model.CAPE:setVisible(false)

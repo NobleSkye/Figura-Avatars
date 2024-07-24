@@ -13,7 +13,7 @@ there might be issues with stacking if pivot point of model group is not at 0 0 
 local model = models.plushie.Skull -- model part for plushie
 local headOffset = 6 -- how high should plushie move when entity have it on helmet slot
 local sitOffset = vec(0, -8, -2) -- where should plushie move when its placed on stairs
-local test = false
+
 -- basic variables
 local offset = vec(0, 1, 0)
 local vec3 = vec(1, 1, 1)
