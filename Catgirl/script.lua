@@ -16,7 +16,7 @@
 -- Local Vars
 
 local squapi = require("SquAPI")
-require("CommandAliases")
+require("CommandAPI")
 
 nameplate.LIST:setText(
     '[{"color":"#fc97fc","text":"ᴜᴡᴜ "},' ..
