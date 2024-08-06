@@ -1,14 +1,14 @@
-\--       ___           ___           ___           ___           ___           ___           ___          
---      /  /\         /  /\         /  /\         /  /\         /  /\         /  /\         /  /\         
---     /  /::\       /  /::\       /  /::|       /  /::|       /  /::\       /  /::|       /  /::\        
---    /  /:/\:\     /  /:/\:\     /  /:|:|      /  /:|:|      /  /:/\:\     /  /:|:|      /  /:/\:\       
---   /  /:/  \:\   /  /:/  \:\   /  /:/|:|__   /  /:/|:|__   /  /::\ \:\   /  /:/|:|__   /  /:/  \:\      
---  /__/:/ \  \:\ /__/:/ \__\:\ /__/:/_|::::\ /__/:/_|::::\ /__/:/\:\_\:\ /__/:/ |:| /\ /__/:/ \__\:|     
---  \  \:\  \__\/ \  \:\ /  /:/ \__\/  /~~/:/ \__\/  /~~/:/ \__\/  \:\/:/ \__\/  |:|/:/ \  \:\ /  /:/     
---   \  \:\        \  \:\  /:/        /  /:/        /  /:/       \__\::/      |  |:/:/   \  \:\  /:/      
---    \  \:\        \  \:\/:/        /  /:/        /  /:/        /  /:/       |__|::/     \  \:\/:/       
---     \  \:\        \  \::/        /__/:/        /__/:/        /__/:/        /__/:/       \__\__/        
---      \__\/         \__\/         \__\/         \__\/         \__\/         \__\/                       
+--       ___            ___            ___            ___            ___            ___            ___          
+--      /  /\          /  /\          /  /\          /  /\          /  /\          /  /\          /  /\         
+--     /  /::\        /  /::\        /  /::|        /  /::|        /  /::\        /  /::|        /  /::\        
+--    /  /:/\:\      /  /:/\:\      /  /:|:|       /  /:|:|       /  /:/\:\      /  /:|:|       /  /:/\:\       
+--   /  /:/  \:\    /  /:/  \:\    /  /:/|:|__    /  /:/|:|__    /  /::\ \:\    /  /:/|:|__    /  /:/  \:\      
+--  /__/:/ \  \:\  /__/:/ \__\:\  /__/:/_|::::\  /__/:/_|::::\  /__/:/\:\_\:\  /__/:/ |:| /\  /__/:/ \__\:|     
+--  \  \:\  \__\/  \  \:\ /  /:/  \__\/  /~~/:/  \__\/  /~~/:/  \__\/  \:\/:/  \__\/  |:|/:/  \  \:\ /  /:/     
+--   \  \:\         \  \:\  /:/         /  /:/         /  /:/        \__\::/       |  |:/:/    \  \:\  /:/      
+--    \  \:\         \  \:\/:/         /  /:/         /  /:/         /  /:/        |__|::/      \  \:\/:/       
+--     \  \:\         \  \::/         /__/:/         /__/:/         /__/:/         /__/:/        \__\__/        
+--      \__\/          \__\/          \__\/          \__\/          \__\/          \__\/                        
 
 
 -- Variable to keep track of invisibility status
@@ -110,8 +110,6 @@ Available Commands:
 
 By NobleSkye
     ]]
-
-    print(commands_list)
 end
 
 -- Event handler for chat messages
@@ -177,26 +175,3 @@ function events.entity_init()
 end
 
 
-
-
-
-
--- -- Define hotkeys and their functions
--- local function setupHotkeys()
---     local keybinds = keybinds or {}
-
---     local survivalKey = keybinds:newKeybind('Set Survival Mode', 'key.keyboard.f13')
---     survivalKey.press = function() gms() end
-
---     local creativeKey = keybinds:newKeybind('Set Creative Mode', 'key.keyboard.f14')
---     creativeKey.press = function() gmc() end
-
---     local spectatorKey = keybinds:newKeybind('Set Spectator Mode', 'key.keyboard.f15')
---     spectatorKey.press = function() gmsp() end
-
---     local adventureKey = keybinds:newKeybind('Set Adventure Mode', 'key.keyboard.f16')
---     adventureKey.press = function() gma() end
--- end
-
--- -- Call setupHotkeys() to initialize the hotkeys
--- setupHotkeys()
