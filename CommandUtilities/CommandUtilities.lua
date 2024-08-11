@@ -35,6 +35,15 @@ function gma()
     host:sendChatCommand("/gamemode adventure")
 end
 
+function crawl()
+    host:sendChatCommand("/crawl")
+end
+
+function sit()
+    host:sendChatCommand("/sit")
+end
+
+
 -- Function to change player scale
 function plscale_change(scale)
     if scale then
@@ -182,22 +191,28 @@ end
 
 
 
--- -- Define hotkeys and their functions
--- local function setupHotkeys()
---     local keybinds = keybinds or {}
+-- Define hotkeys and their functions
+local function setupHotkeys()
+    local keybinds = keybinds or {}
 
---     local survivalKey = keybinds:newKeybind('Set Survival Mode', 'key.keyboard.f13')
---     survivalKey.press = function() gms() end
+    local survivalKey = keybinds:newKeybind('Set Survival Mode', 'key.keyboard.f13')
+    survivalKey.press = function() gms() end
 
---     local creativeKey = keybinds:newKeybind('Set Creative Mode', 'key.keyboard.f14')
---     creativeKey.press = function() gmc() end
+    local creativeKey = keybinds:newKeybind('Set Creative Mode', 'key.keyboard.f14')
+    creativeKey.press = function() gmc() end
 
---     local spectatorKey = keybinds:newKeybind('Set Spectator Mode', 'key.keyboard.f15')
---     spectatorKey.press = function() gmsp() end
+    local spectatorKey = keybinds:newKeybind('Set Spectator Mode', 'key.keyboard.f15')
+    spectatorKey.press = function() gmsp() end
 
---     local adventureKey = keybinds:newKeybind('Set Adventure Mode', 'key.keyboard.f16')
---     adventureKey.press = function() gma() end
--- end
+    local adventureKey = keybinds:newKeybind('Set Adventure Mode', 'key.keyboard.f16')
+    adventureKey.press = function() crawl() end
 
--- -- Call setupHotkeys() to initialize the hotkeys
--- setupHotkeys()
+    local crawlKey = keybinds:newKeybind('Runs /crawl', 'key.keyboard.f17')
+    crawlKey.press = function() crawl() end
+
+    local sitKey = keybinds:newKeybind('Runs /sit', 'key.keyboard.f18a')
+    sitKey.press = function() sit() end
+end
+
+-- Call setupHotkeys() to initialize the hotkeys
+setupHotkeys()
