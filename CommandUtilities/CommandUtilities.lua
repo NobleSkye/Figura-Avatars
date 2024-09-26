@@ -210,7 +210,7 @@ local function setupHotkeys()
     local crawlKey = keybinds:newKeybind('Runs /crawl', 'key.keyboard.f17')
     crawlKey.press = function() crawl() end
 
-    local sitKey = keybinds:newKeybind('Runs /sit', 'key.keyboard.f18a')
+    local sitKey = keybinds:newKeybind('Runs /sit', 'key.keyboard.f18')
     sitKey.press = function() sit() end
 end
 
